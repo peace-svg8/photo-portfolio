@@ -24,7 +24,7 @@ export const projects = [
     number: "04",
     title: "STUDIO ENHANCEMENT",
     description: "Studio cleanup, background refinement and final image enhancement.",
-    beforeImage: "/AFter (3).jpg",
+    beforeImage: "/After (3).jpg",
     afterImage: "/Before (3).jpg"
   }
 ];
