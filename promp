@@ -1,0 +1,796 @@
+Build a premium, minimalist photography retouching portfolio website for a photo editor named Nicholas.
+
+The website is NOT a photographer booking website and NOT a generic developer portfolio. It is a visual portfolio specifically designed to showcase photo retouching, color correction, image enhancement, and Photoshop editing work.
+
+The primary purpose is to make visitors immediately understand:
+
+1. Nicholas edits and retouches photographs.
+2. His work focuses on natural, polished, professional-looking results.
+3. Visitors can compare before and after versions of his edits.
+4. The website itself should feel like a high-end visual/editorial portfolio.
+
+IMPORTANT:
+Do not start by writing a huge amount of code blindly. First establish the component structure and design system, then implement the page cleanly.
+
+==================================================
+TECH STACK
+==================================================
+
+Use:
+
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion for animations
+- Lucide React for icons
+- Vite if a build setup is required
+- No unnecessary UI component library
+
+The website must be fully responsive across:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+The code should be clean, reusable, maintainable, and component-based.
+
+==================================================
+DESIGN DIRECTION
+==================================================
+
+The visual direction should be:
+
+- Dark
+- Minimal
+- Editorial
+- Cinematic
+- Sophisticated
+- Photography-focused
+- Modern
+- Spacious
+- Premium without being flashy
+
+Think of an editorial photography magazine combined with a modern creative portfolio.
+
+The photographs should be the visual focus.
+
+Do NOT make the website look like:
+
+- A generic SaaS landing page
+- A typical developer portfolio
+- A photography booking template
+- A template with excessive gradients
+- A template with excessive glassmorphism
+- A website overloaded with cards
+- A website with unnecessary animations everywhere
+
+The design should feel intentional and artistic.
+
+==================================================
+COLOR SYSTEM
+==================================================
+
+Use a dark neutral palette.
+
+Primary background:
+Near-black / charcoal.
+
+Example direction:
+#0A0A0A or a similar near-black.
+
+Primary text:
+Warm white / off-white.
+
+Secondary text:
+Muted gray.
+
+Borders:
+Very subtle dark gray.
+
+Accent:
+Keep the accent extremely subtle. The photography itself should provide most of the color.
+
+Avoid bright neon colors.
+
+Avoid excessive gradients.
+
+==================================================
+TYPOGRAPHY
+==================================================
+
+Use a modern editorial typography system.
+
+Use a clean sans-serif font for most UI and body text.
+
+Large typography should be used strategically.
+
+Hero typography should feel bold and confident.
+
+Use uppercase labels with letter spacing for small section labels.
+
+Example:
+
+SELECTED WORK
+
+PORTRAIT
+RETOUCHING
+
+Typography should create hierarchy through:
+
+- Size
+- Weight
+- Letter spacing
+- Line height
+- Whitespace
+
+Do not use too many different fonts.
+
+==================================================
+GLOBAL LAYOUT
+==================================================
+
+The site should feel spacious.
+
+Use generous horizontal padding on desktop.
+
+On mobile, reduce padding appropriately.
+
+Content should not stretch infinitely across very large screens.
+
+Use a sensible max-width container.
+
+Images should be allowed to become large and immersive.
+
+Use asymmetric/editorial layouts where appropriate instead of putting everything into identical centered cards.
+
+==================================================
+NAVIGATION
+==================================================
+
+Create a minimal sticky navigation.
+
+Desktop:
+
+LEFT:
+NICHOLAS
+
+RIGHT:
+WORK
+ABOUT
+CONTACT
+
+The navbar should be simple.
+
+Use a transparent or near-black background initially.
+
+When scrolling, it can subtly gain a darker background/backdrop.
+
+Do not make the navbar overly large.
+
+The "NICHOLAS" logo/text should link back to the top.
+
+Navigation links should smoothly scroll to their sections.
+
+Mobile:
+
+Show the logo on the left.
+
+Show a minimal menu button on the right.
+
+Open a clean fullscreen/mobile navigation menu with:
+
+WORK
+ABOUT
+CONTACT
+
+Use a subtle Framer Motion animation.
+
+==================================================
+HERO SECTION
+==================================================
+
+The hero should immediately communicate that this is a photo retouching portfolio.
+
+Create a large editorial hero.
+
+Small eyebrow text:
+
+PHOTO RETOUCHING
+
+Main headline:
+
+TURNING RAW
+PHOTOGRAPHS
+INTO REFINED
+VISUALS.
+
+Use a very large responsive headline.
+
+The headline should be one of the strongest visual elements on the page.
+
+Supporting paragraph:
+
+"Professional photo retouching, color correction and image enhancement with a focus on natural, polished results."
+
+CTA:
+
+VIEW SELECTED WORK →
+
+The CTA should smoothly scroll to the work section.
+
+Hero image:
+
+Use a large placeholder image for now.
+
+IMPORTANT:
+The real photography images will be added later during development.
+
+Create the image areas in such a way that replacing placeholder images with real before/after photography will be extremely easy.
+
+Use object-cover where appropriate.
+
+The hero image can occupy a large portion of the viewport.
+
+Consider an editorial split layout where typography occupies one side and the photograph occupies the other.
+
+Do not overcrowd the hero.
+
+Add subtle entrance animations:
+
+- Headline fades/slides upward
+- Supporting text appears shortly after
+- CTA appears afterward
+- Hero image subtly fades/scales into position
+
+Animations should be subtle and fast.
+
+==================================================
+INTRODUCTION / STATEMENT
+==================================================
+
+After the hero, create a large statement section.
+
+Use the statement:
+
+"EVERY PHOTOGRAPH HAS MORE TO REVEAL."
+
+Below it:
+
+"Editing is not about changing everything.
+It's about knowing what to refine, what to preserve,
+and when to stop."
+
+This section should have lots of whitespace.
+
+Use large typography.
+
+The section should act as a transition between the hero and portfolio.
+
+==================================================
+SELECTED WORK
+==================================================
+
+This is the most important section of the website.
+
+Section label:
+
+SELECTED WORK
+
+Heading:
+
+A closer look at the edits.
+
+Supporting text:
+
+"A selection of portraits and photographs I've retouched, enhanced and refined."
+
+Create four initial portfolio projects.
+
+Use placeholder images for now.
+
+Projects:
+
+01 — PORTRAIT RETOUCHING
+
+Description:
+"Natural skin retouching, texture refinement and tonal adjustments."
+
+02 — COLOR ENHANCEMENT
+
+Description:
+"Exposure, contrast, color balance and overall image refinement."
+
+03 — PORTRAIT COLOR GRADING
+
+Description:
+"Subtle tonal and color adjustments to strengthen the mood of the photograph."
+
+04 — STUDIO ENHANCEMENT
+
+Description:
+"Studio cleanup, background refinement and final image enhancement."
+
+==================================================
+BEFORE / AFTER COMPONENT
+==================================================
+
+This is a key feature.
+
+Create a reusable BeforeAfterSlider component.
+
+It should accept:
+
+- beforeImage
+- afterImage
+- title
+- description
+- projectNumber
+
+The component should display the after image as the main image with the before image clipped underneath/alongside it.
+
+Add a draggable vertical divider.
+
+The user should be able to:
+
+- Drag the divider with mouse
+- Drag with touch on mobile
+- Use a pointer interaction
+- See a circular handle at the center of the divider
+
+Add labels:
+
+BEFORE
+AFTER
+
+The slider should feel smooth and polished.
+
+The divider should not look like a generic browser slider.
+
+Create a custom visual handle.
+
+For example:
+
+     ← →
+
+inside a small circular/rounded handle.
+
+The comparison should work correctly on:
+
+- Desktop
+- Tablet
+- Mobile
+
+Make sure the images maintain the correct aspect ratio.
+
+Do not distort the photographs.
+
+==================================================
+PORTFOLIO LAYOUT
+==================================================
+
+Do NOT place all four projects into tiny cards.
+
+Make the projects feel editorial.
+
+For example:
+
+Project 01:
+Large full-width before/after comparison.
+
+Project information underneath or beside it.
+
+Project 02:
+Different layout orientation.
+
+Project 03:
+Large comparison.
+
+Project 04:
+Different editorial arrangement.
+
+Use alternating layouts to prevent the page from feeling repetitive.
+
+On mobile, stack everything vertically.
+
+Each project should have:
+
+01
+PORTRAIT RETOUCHING
+
+Before/after comparison
+
+Natural skin retouching, texture refinement and tonal adjustments.
+
+VIEW PROJECT →
+
+The "VIEW PROJECT" button does not need to navigate to another page unless you decide a project detail page is useful.
+
+For the first version, it can simply be a visual/anchor interaction.
+
+==================================================
+SERVICES SECTION
+==================================================
+
+Create a minimal section titled:
+
+WHAT I DO
+
+Introduce four services.
+
+01
+PORTRAIT RETOUCHING
+
+Natural skin cleanup, texture preservation and facial refinement.
+
+02
+COLOR CORRECTION
+
+Exposure, contrast, white balance and color refinement.
+
+03
+IMAGE ENHANCEMENT
+
+Improving lighting, detail, tonal balance and overall visual quality.
+
+04
+CREATIVE EDITING
+
+Advanced Photoshop manipulation and creative image transformation.
+
+Design this section as typography-driven rows rather than generic service cards.
+
+Each row should have:
+
+Number
+Service title
+Short description
+Arrow/icon
+
+On hover:
+
+- Row subtly shifts
+- Arrow moves slightly
+- Background changes very subtly
+- Text transitions smoothly
+
+Keep the effect understated.
+
+==================================================
+APPROACH SECTION
+==================================================
+
+Create a section called:
+
+MY APPROACH
+
+Large statement:
+
+ENHANCE.
+DON'T ERASE.
+
+Supporting text:
+
+"Good retouching should improve an image without taking away what makes it feel real."
+
+Then create four steps.
+
+01 — ANALYZE
+
+Understand the photograph and identify what needs improvement.
+
+02 — RETOUCH
+
+Clean imperfections while maintaining natural texture and detail.
+
+03 — REFINE
+
+Work on tones, colors, lighting and overall visual balance.
+
+04 — FINALIZE
+
+Make sure the finished photograph feels polished without looking over-processed.
+
+Use a simple editorial timeline or vertical sequence.
+
+Do not make this look like a SaaS process diagram.
+
+==================================================
+ABOUT SECTION
+==================================================
+
+Create an "ABOUT" section.
+
+Heading:
+
+BACK TO THE CRAFT.
+
+Text:
+
+"I started editing photographs years ago and recently found myself drawn back to the craft. I'm rebuilding my skills, experimenting with different techniques, and developing my own approach to creating polished, natural-looking images."
+
+Keep the section personal but professional.
+
+Do not make it excessively long.
+
+Use a placeholder portrait/image area if appropriate, but keep it optional.
+
+The focus should remain on the work.
+
+==================================================
+CONTACT SECTION
+==================================================
+
+Create a strong closing CTA.
+
+Large heading:
+
+HAVE AN IMAGE
+THAT NEEDS MORE?
+
+Supporting text:
+
+"Let's create something worth looking at."
+
+Buttons:
+
+GET IN TOUCH →
+
+INSTAGRAM →
+
+The primary contact button can be styled as an outlined or filled button.
+
+The actual WhatsApp/Instagram links should be easy to replace later.
+
+Use placeholder links for now.
+
+==================================================
+FOOTER
+==================================================
+
+Minimal footer.
+
+Left:
+
+NICHOLAS
+
+Center or right:
+
+PHOTO RETOUCHING
+
+WORK
+ABOUT
+CONTACT
+INSTAGRAM
+
+Bottom:
+
+© 2026 Nicholas. All rights reserved.
+
+Keep it very minimal.
+
+==================================================
+ANIMATION SYSTEM
+==================================================
+
+Use Framer Motion.
+
+Animations should support the design rather than distract from it.
+
+Use:
+
+- Fade-up entrance animations
+- Subtle image reveal animations
+- Staggered text animations
+- Smooth section reveals
+- Hover transitions
+- Before/after slider interactions
+- Subtle navbar transition on scroll
+
+Avoid:
+
+- Excessive bouncing
+- Huge text rotations
+- Random parallax everywhere
+- Excessive blur
+- Long loading animations
+- Animations that slow down the experience
+
+Respect prefers-reduced-motion.
+
+If the user has reduced motion enabled, significantly reduce or disable decorative animations.
+
+==================================================
+IMAGE HANDLING
+==================================================
+
+For now, use placeholder image URLs or local placeholder assets.
+
+Structure the image data separately from the UI components.
+
+For example, create a portfolio data structure:
+
+const projects = [
+  {
+    number: "01",
+    title: "Portrait Retouching",
+    description: "...",
+    beforeImage: "...",
+    afterImage: "..."
+  },
+  ...
+]
+
+This is VERY IMPORTANT.
+
+Do not hardcode image URLs throughout the JSX.
+
+I will replace the placeholder images with my real before/after images later.
+
+Make replacing the images as simple as changing the image paths in one data file.
+
+==================================================
+RESPONSIVE DESIGN
+==================================================
+
+Desktop:
+
+Use large editorial layouts.
+
+Allow large images.
+
+Use asymmetric layouts where appropriate.
+
+Tablet:
+
+Reduce typography and spacing.
+
+Keep the visual hierarchy intact.
+
+Mobile:
+
+The website must still feel premium.
+
+Do not simply shrink the desktop layout.
+
+Reorganize sections appropriately.
+
+Hero should become:
+
+Text
+CTA
+Image
+
+Portfolio comparisons should become full-width.
+
+Service rows should stack appropriately.
+
+Navigation should become a mobile menu.
+
+Before/after sliders must remain fully usable with touch.
+
+Make sure:
+
+- No horizontal overflow
+- No broken images
+- No text clipping
+- No oversized typography
+- Buttons remain accessible
+- Images don't distort
+
+==================================================
+ACCESSIBILITY
+==================================================
+
+Use semantic HTML.
+
+Use proper heading hierarchy.
+
+Use alt text for images.
+
+Ensure sufficient text contrast.
+
+Buttons and links must be keyboard accessible.
+
+The before/after slider should have an accessible label.
+
+Respect prefers-reduced-motion.
+
+==================================================
+CODE STRUCTURE
+==================================================
+
+Use reusable components.
+
+Suggested structure:
+
+src/
+  components/
+    Navbar.tsx
+    Hero.tsx
+    Statement.tsx
+    SelectedWork.tsx
+    BeforeAfterSlider.tsx
+    ProjectItem.tsx
+    Services.tsx
+    Approach.tsx
+    About.tsx
+    Contact.tsx
+    Footer.tsx
+
+  data/
+    projects.ts
+
+  App.tsx
+
+Keep components focused.
+
+Do not create one enormous App.tsx file.
+
+==================================================
+IMPORTANT DESIGN RULES
+==================================================
+
+1. Photography is the hero of the website.
+
+2. Do not use generic stock-style UI illustrations.
+
+3. Do not fill every section with cards.
+
+4. Use whitespace aggressively.
+
+5. Use large typography strategically.
+
+6. Keep the color palette restrained.
+
+7. Let the photographs provide the color.
+
+8. The before/after interaction should be one of the site's signature experiences.
+
+9. Make the site feel like a creative professional's portfolio, not a developer template.
+
+10. Avoid unnecessary gradients and glassmorphism.
+
+11. Avoid excessive rounded cards.
+
+12. Keep borders subtle.
+
+13. Use smooth but restrained animation.
+
+14. Make the design feel premium through spacing, typography, composition and imagery rather than excessive effects.
+
+==================================================
+FINAL GOAL
+==================================================
+
+The final website should make a visitor feel that they are looking at the portfolio of someone who understands:
+
+- Portrait retouching
+- Natural skin editing
+- Color
+- Lighting
+- Image refinement
+- Visual composition
+- Photoshop
+
+The site should communicate craftsmanship.
+
+The main experience should be:
+
+SEE THE IMAGE
+→
+COMPARE THE BEFORE/AFTER
+→
+UNDERSTAND THE EDIT
+→
+EXPLORE MORE WORK
+→
+CONTACT NICHOLAS
+
+Build the first version with polished placeholder images.
+
+Do not wait for the final photography assets.
+
+Make the image system easy to replace later.
+
+Before finishing, verify that the entire website is responsive, all navigation links work, the before/after sliders work with mouse and touch, animations are smooth, and there are no console errors.
