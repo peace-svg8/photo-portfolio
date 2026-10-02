@@ -64,21 +64,21 @@ export default function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAft
         handleMove(e.touches[0].clientX);
       }}
     >
-      {/* After Image (Background) */}
+      {/* Before Image (Background) */}
       <img 
-        src={afterImage} 
-        alt="After retouching" 
+        src={beforeImage} 
+        alt="Before retouching" 
         className="absolute inset-0 w-full h-full object-contain pointer-events-none"
       />
 
-      {/* Before Image (Foreground, Clipped) */}
+      {/* After Image (Foreground, Clipped) */}
       <div 
         className="absolute inset-0 w-full h-full clip-path-slider pointer-events-none"
         style={{ '--clip-percent': `${sliderPosition}%` } as React.CSSProperties}
       >
         <img 
-          src={beforeImage} 
-          alt="Before retouching" 
+          src={afterImage} 
+          alt="After retouching" 
           className="absolute inset-0 w-full h-full object-contain"
         />
       </div>
