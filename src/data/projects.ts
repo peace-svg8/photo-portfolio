@@ -3,8 +3,8 @@ export const projects = [
     number: "01",
     title: "PORTRAIT RETOUCHING",
     description: "Natural skin retouching, texture refinement and tonal adjustments.",
-    beforeImage: "/Before new.jpg",
-    afterImage: "/After new.jpg"
+    beforeImage: "/After new.jpg",
+    afterImage: "/Before new.jpg"
   },
   {
     number: "02",
