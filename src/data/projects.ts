@@ -3,28 +3,35 @@ export const projects = [
     number: "01",
     title: "PORTRAIT RETOUCHING",
     description: "Natural skin retouching, texture refinement and tonal adjustments.",
-    beforeImage: "/After new.jpg",
-    afterImage: "/Before new.jpg"
+    beforeImage: "/Before.new.JPG",
+    afterImage: "/After.new.jpg"
   },
   {
     number: "02",
-    title: "COLOR ENHANCEMENT",
-    description: "Exposure, contrast, color balance and overall image refinement.",
-    beforeImage: "/After.jpg",
-    afterImage: "/Before.jpg"
+    title: "PORTRAIT RETOUCHING II",
+    description: "Advanced skin retouching and portrait enhancement.",
+    beforeImage: "/Before re.jpg",
+    afterImage: "/After re.jpg"
   },
   {
     number: "03",
-    title: "PORTRAIT COLOR GRADING",
-    description: "Subtle tonal and color adjustments to strengthen the mood of the photograph.",
-    beforeImage: "/After (2).jpg",
-    afterImage: "/Before (2).jpg"
+    title: "COLOR ENHANCEMENT",
+    description: "Exposure, contrast, color balance and overall image refinement.",
+    beforeImage: "/Before.jpg",
+    afterImage: "/After.jpg"
   },
   {
     number: "04",
+    title: "PORTRAIT COLOR GRADING",
+    description: "Subtle tonal and color adjustments to strengthen the mood of the photograph.",
+    beforeImage: "/Before (2).jpg",
+    afterImage: "/After (2).jpg"
+  },
+  {
+    number: "05",
     title: "STUDIO ENHANCEMENT",
     description: "Studio cleanup, background refinement and final image enhancement.",
-    beforeImage: "/studio-new.jpg",
-    afterImage: "/Before (3).jpg"
+    beforeImage: "/Before (3).jpg",
+    afterImage: "/After (3).jpg"
   }
 ];
