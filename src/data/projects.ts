@@ -33,5 +33,12 @@ export const projects = [
     description: "Studio cleanup, background refinement and final image enhancement.",
     beforeImage: "/Before (3).jpg",
     afterImage: "/After (3).jpg"
+  },
+  {
+    number: "06",
+    title: "COLOR GRADING II",
+    description: "Exposure, contrast, color balance and overall image refinement.",
+    beforeImage: "/Before it.jpg",
+    afterImage: "/After it.jpg"
   }
 ];
